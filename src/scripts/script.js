@@ -92,3 +92,39 @@ const conversions = {
             
             addToHistory(`${value} ${fromUnit} = ${weightOutput.value} ${toUnit}`, 'Weight');
         }
+
+        // Temperature conversion
+        const tempInput = document.getElementById('temp-input');
+        const tempFrom = document.getElementById('temp-from');
+        const tempTo = document.getElementById('temp-to');
+        const tempOutput = document.getElementById('temp-output');
+
+        tempInput.addEventListener('input', () => convertTemperature());
+        tempFrom.addEventListener('change', () => convertTemperature());
+        tempTo.addEventListener('change', () => convertTemperature());
+
+        function convertTemperature() {
+            const value = parseFloat(tempInput.value);
+            
+            if (isNaN(value) || tempInput.value === '') {
+                tempOutput.value = '';
+                return;
+            }
+
+            const fromUnit = tempFrom.value;
+            const toUnit = tempTo.value;
+
+            let celsius;
+            if (fromUnit === 'celsius') celsius = value;
+            else if (fromUnit === 'fahrenheit') celsius = (value - 32) * 5/9;
+            else if (fromUnit === 'kelvin') celsius = value - 273.15;
+
+            let result;
+            if (toUnit === 'celsius') result = celsius;
+            else if (toUnit === 'fahrenheit') result = (celsius * 9/5) + 32;
+            else if (toUnit === 'kelvin') result = celsius + 273.15;
+
+            tempOutput.value = result.toFixed(4).replace(/\.?0+$/, '');
+            
+            addToHistory(`${value}° ${fromUnit} = ${tempOutput.value}° ${toUnit}`, 'Temperature');
+        }
