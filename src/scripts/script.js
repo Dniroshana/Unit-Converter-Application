@@ -63,3 +63,32 @@ const conversions = {
             
             addToHistory(`${value} ${fromUnit} = ${lengthOutput.value} ${toUnit}`, 'Length');
         }
+
+        // Weight conversion
+        const weightInput = document.getElementById('weight-input');
+        const weightFrom = document.getElementById('weight-from');
+        const weightTo = document.getElementById('weight-to');
+        const weightOutput = document.getElementById('weight-output');
+
+        weightInput.addEventListener('input', () => convertWeight());
+        weightFrom.addEventListener('change', () => convertWeight());
+        weightTo.addEventListener('change', () => convertWeight());
+
+        function convertWeight() {
+            const value = parseFloat(weightInput.value);
+            
+            if (isNaN(value) || weightInput.value === '') {
+                weightOutput.value = '';
+                return;
+            }
+
+            const fromUnit = weightFrom.value;
+            const toUnit = weightTo.value;
+
+            const kg = value / conversions.weight[fromUnit];
+            const result = kg * conversions.weight[toUnit];
+
+            weightOutput.value = result.toFixed(6).replace(/\.?0+$/, '');
+            
+            addToHistory(`${value} ${fromUnit} = ${weightOutput.value} ${toUnit}`, 'Weight');
+        }
