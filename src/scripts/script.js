@@ -128,3 +128,62 @@ const conversions = {
             
             addToHistory(`${value}° ${fromUnit} = ${tempOutput.value}° ${toUnit}`, 'Temperature');
         }
+
+        // Swap units
+        function swapUnits(type) {
+            let fromSelect, toSelect, inputField;
+            
+            if (type === 'length') {
+                fromSelect = lengthFrom;
+                toSelect = lengthTo;
+                inputField = lengthInput;
+            } else if (type === 'weight') {
+                fromSelect = weightFrom;
+                toSelect = weightTo;
+                inputField = weightInput;
+            } else if (type === 'temperature') {
+                fromSelect = tempFrom;
+                toSelect = tempTo;
+                inputField = tempInput;
+            }
+
+            const temp = fromSelect.value;
+            fromSelect.value = toSelect.value;
+            toSelect.value = temp;
+
+            if (type === 'length') convertLength();
+            else if (type === 'weight') convertWeight();
+            else if (type === 'temperature') convertTemperature();
+        }
+
+        // History management
+        function addToHistory(conversion, type) {
+            const timestamp = new Date().toLocaleTimeString();
+            const entry = `[${type}] ${conversion} (${timestamp})`;
+            
+            history.unshift(entry);
+            
+            if (history.length > maxHistory) {
+                history = history.slice(0, maxHistory);
+            }
+            
+            updateHistoryDisplay();
+        }
+
+        function updateHistoryDisplay() {
+            const historyList = document.getElementById('history-list');
+            
+            if (history.length === 0) {
+                historyList.innerHTML = '<div class="history-empty">No conversions yet</div>';
+                return;
+            }
+
+            historyList.innerHTML = history.map(item => 
+                `<div class="history-item">${item}</div>`
+            ).join('');
+        }
+
+        function clearHistory() {
+            history = [];
+            updateHistoryDisplay();
+        }
