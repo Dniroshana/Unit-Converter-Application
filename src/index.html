@@ -61,6 +61,43 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Weight Converter -->
+            <div class="converter-section" id="weight">
+                <div class="input-group">
+                    <label>From:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight-input" placeholder="Enter value" step="any">
+                        <select id="weight-from">
+                            <option value="kilogram">Kilogram (kg)</option>
+                            <option value="gram">Gram (g)</option>
+                            <option value="milligram">Milligram (mg)</option>
+                            <option value="ton">Metric Ton (t)</option>
+                            <option value="pound">Pound (lb)</option>
+                            <option value="ounce">Ounce (oz)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 15px 0;">
+                    <button class="swap-btn" onclick="swapUnits('weight')">⇅</button>
+                </div>
+
+                <div class="input-group">
+                    <label>To:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight-output" placeholder="Result" readonly>
+                        <select id="weight-to">
+                            <option value="kilogram">Kilogram (kg)</option>
+                            <option value="gram">Gram (g)</option>
+                            <option value="milligram">Milligram (mg)</option>
+                            <option value="ton">Metric Ton (t)</option>
+                            <option value="pound" selected>Pound (lb)</option>
+                            <option value="ounce">Ounce (oz)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         
     </div>
 
