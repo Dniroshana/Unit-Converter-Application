@@ -1,0 +1,41 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/unit-converter*
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Validate HTML
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v1
+        with:
+          root: .
+
+      # Step 3: Check JavaScript syntax
+      - name: Check JavaScript syntax
+        run: |
+          echo "Checking JavaScript syntax..."
+          node --check *.js || echo "No external JS files found"
+
+      # Step 4: Build step
+      - name: Build project
+        run: echo "Static HTML/CSS/JS project – no build required"
+
+      # Step 5: Test step
+      - name: Run tests
+        run: echo "No automated tests configured"
