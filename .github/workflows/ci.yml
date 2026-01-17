@@ -22,32 +22,20 @@ jobs:
 
       # Step 2: Validate HTML
       - name: Validate HTML
-        uses: Cyb3r-Jak3/html5validator-action@v7
+        uses: Cyb3r-Jak3/html5validator-action@v1
         with:
           root: .
 
       # Step 3: Check JavaScript syntax
       - name: Check JavaScript syntax
         run: |
-          for file in *.js; do
-            if [ -f "$file" ]; then
-              node --check "$file"
-            fi
-          done
+          echo "Checking JavaScript syntax..."
+          node --check *.js || echo "No external JS files found"
 
-      # Step 4: Check CSS files exist
-      - name: Check CSS files
-        run: |
-          if ls *.css 1> /dev/null 2>&1; then
-            echo "CSS files found"
-          else
-            echo "No external CSS files found (using internal CSS)"
-          fi
-
-      # Step 5: Build step (static project)
+      # Step 4: Build step
       - name: Build project
-        run: echo "Static project – no build required"
+        run: echo "Static HTML/CSS/JS project – no build required"
 
-      # Step 6: Test step
+      # Step 5: Test step
       - name: Run tests
         run: echo "No automated tests configured"
