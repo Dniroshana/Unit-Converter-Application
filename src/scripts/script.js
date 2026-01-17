@@ -34,3 +34,32 @@ const conversions = {
                 document.getElementById(tabName).classList.add('active');
             });
         });
+
+        // Length conversion
+        const lengthInput = document.getElementById('length-input');
+        const lengthFrom = document.getElementById('length-from');
+        const lengthTo = document.getElementById('length-to');
+        const lengthOutput = document.getElementById('length-output');
+
+        lengthInput.addEventListener('input', () => convertLength());
+        lengthFrom.addEventListener('change', () => convertLength());
+        lengthTo.addEventListener('change', () => convertLength());
+
+        function convertLength() {
+            const value = parseFloat(lengthInput.value);
+            
+            if (isNaN(value) || lengthInput.value === '') {
+                lengthOutput.value = '';
+                return;
+            }
+
+            const fromUnit = lengthFrom.value;
+            const toUnit = lengthTo.value;
+
+            const meters = value / conversions.length[fromUnit];
+            const result = meters * conversions.length[toUnit];
+
+            lengthOutput.value = result.toFixed(6).replace(/\.?0+$/, '');
+            
+            addToHistory(`${value} ${fromUnit} = ${lengthOutput.value} ${toUnit}`, 'Length');
+        }
