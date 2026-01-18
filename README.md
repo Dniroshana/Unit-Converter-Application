@@ -15,29 +15,29 @@ A modern, fast, and responsive web application designed to convert units across 
 
 | Student Name (As per LMS) | Student ID | Primary Role |
 | --- | --- | --- |
-| **[A.B Dasun Niroshana]** | [ITBNM-2313-0020] | **HTML Developer & Version Control** |
-| **[K.R. Waruni Samanmaie Dissanayake]** | [ITBNM-2313-0022] | **CSS Developer & UI Designer** |
-| **[S.R. Udara Welathanthri]** | [ITBNM-2313-0083] | **JavaScript Logic Developer** |
+| **A.B Dasun Niroshana** | ITBNM-2313-0020 | **HTML Developer & Version Control** |
+| **K.R. Waruni Samanmaie Dissanayake** | ITBNM-2313-0022 | **CSS Developer & UI Designer** |
+| **S.R. Udara Welathanthri** | ITBNM-2313-0083 | **JavaScript Logic Developer** |
 
 ---
 
 ## ✅ Individual Contributions
 
-### **1. [A.B Dasun Niroshana] — HTML & GitHub Management**
+### **1. A.B Dasun Niroshana — HTML & GitHub Management**
 
 * **Structure:** Developed the semantic HTML5 skeleton of the application, ensuring accessibility and proper document flow.
 * **GitHub Workflow:** Handled the repository initialization, managed commits, and organized the final project structure for version control.
 * **Metadata:** Configured head metadata for SEO and mobile responsiveness (viewport tags).
 * **Deployment:** Managed the live hosting and build status integration.
 
-### **2. [K.R. Waruni Samanmaie Dissanayake] — CSS & UI/UX Design**
+### **2. K.R. Waruni Samanmaie Dissanayake — CSS & UI/UX Design**
 
 * **Visual Identity:** Designed the modern UI using a vibrant linear gradient color palette and professional typography.
 * **Layout:** Implemented a fully responsive flexbox-based design that adapts seamlessly to Mobile, Tablet, and Desktop screens.
 * **Component Styling:** Created interactive tab systems, custom-styled input fields, and hover animations for the "Swap" and "Clear" buttons.
 * **Glassmorphism:** Applied shadow effects and rounded containers to enhance the "Unit Converter" card aesthetic.
 
-### **3. [S.R. Udara Welathanthri] — JavaScript & Logic**
+### **3. S.R. Udara Welathanthri — JavaScript & Logic**
 
 * **Conversion Engine:** Developed the core mathematical algorithms to handle complex unit scaling for Length and Weight.
 * **Temperature Logic:** Implemented specific formulas for Celsius, Fahrenheit, and Kelvin conversions.
