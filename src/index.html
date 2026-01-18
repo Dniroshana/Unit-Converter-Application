@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/Style.css">
     
 </head>
 <body>
@@ -18,9 +18,132 @@
             <button class="tab active" data-tab="length">Length</button>
             <button class="tab" data-tab="weight">Weight</button>
             <button class="tab" data-tab="temperature">Temperature</button>
-        </div>         
+        </div>    
+        
+        <div class="content">
+            <!-- Length Converter -->
+            <div class="converter-section active" id="length">
+                <div class="input-group">
+                    <label>From:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="length-input" placeholder="Enter value" step="any">
+                        <select id="length-from">
+                            <option value="meter">Meter (m)</option>
+                            <option value="kilometer">Kilometer (km)</option>
+                            <option value="centimeter">Centimeter (cm)</option>
+                            <option value="millimeter">Millimeter (mm)</option>
+                            <option value="mile">Mile (mi)</option>
+                            <option value="yard">Yard (yd)</option>
+                            <option value="foot">Foot (ft)</option>
+                            <option value="inch">Inch (in)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 15px 0;">
+                    <button class="swap-btn" onclick="swapUnits('length')">⇅</button>
+                </div>
+
+                <div class="input-group">
+                    <label>To:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="length-output" placeholder="Result" readonly>
+                        <select id="length-to">
+                            <option value="meter">Meter (m)</option>
+                            <option value="kilometer" selected>Kilometer (km)</option>
+                            <option value="centimeter">Centimeter (cm)</option>
+                            <option value="millimeter">Millimeter (mm)</option>
+                            <option value="mile">Mile (mi)</option>
+                            <option value="yard">Yard (yd)</option>
+                            <option value="foot">Foot (ft)</option>
+                            <option value="inch">Inch (in)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weight Converter -->
+            <div class="converter-section" id="weight">
+                <div class="input-group">
+                    <label>From:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight-input" placeholder="Enter value" step="any">
+                        <select id="weight-from">
+                            <option value="kilogram">Kilogram (kg)</option>
+                            <option value="gram">Gram (g)</option>
+                            <option value="milligram">Milligram (mg)</option>
+                            <option value="ton">Metric Ton (t)</option>
+                            <option value="pound">Pound (lb)</option>
+                            <option value="ounce">Ounce (oz)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 15px 0;">
+                    <button class="swap-btn" onclick="swapUnits('weight')">⇅</button>
+                </div>
+
+                <div class="input-group">
+                    <label>To:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight-output" placeholder="Result" readonly>
+                        <select id="weight-to">
+                            <option value="kilogram">Kilogram (kg)</option>
+                            <option value="gram">Gram (g)</option>
+                            <option value="milligram">Milligram (mg)</option>
+                            <option value="ton">Metric Ton (t)</option>
+                            <option value="pound" selected>Pound (lb)</option>
+                            <option value="ounce">Ounce (oz)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temperature Converter -->
+            <div class="converter-section" id="temperature">
+                <div class="input-group">
+                    <label>From:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="temp-input" placeholder="Enter value" step="any">
+                        <select id="temp-from">
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="fahrenheit">Fahrenheit (°F)</option>
+                            <option value="kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 15px 0;">
+                    <button class="swap-btn" onclick="swapUnits('temperature')">⇅</button>
+                </div>
+
+                <div class="input-group">
+                    <label>To:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="temp-output" placeholder="Result" readonly>
+                        <select id="temp-to">
+                            <option value="celsius">Celsius (°C)</option>
+                            <option value="fahrenheit" selected>Fahrenheit (°F)</option>
+                            <option value="kelvin">Kelvin (K)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>Conversion History</h3>
+                    <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+                </div>
+                <div class="history-list" id="history-list">
+                    <div class="history-empty">No conversions yet</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
