@@ -7,7 +7,7 @@ A modern, fast, and responsive web application designed to convert units across 
 
 ## 🚀 Live Deployment
 
-**View the live project:** [https://unit-converte.netlify.app/]
+**View the live project:** https://unit-converte.netlify.app/
 
 ---
 
@@ -68,7 +68,7 @@ A modern, fast, and responsive web application designed to convert units across 
 
 1. Clone the repository:
    
-git clone [https://github.com/Dniroshana/Unit-Converter-Application.git]
+git clone https://github.com/Dniroshana/Unit-Converter-Application.git
 
 
 2. Open `index.html` in any modern web browser.
