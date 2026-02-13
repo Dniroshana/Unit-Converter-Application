@@ -78,4 +78,3 @@ git clone https://github.com/Dniroshana/Unit-Converter-Application.git
 
 ---
 
-ඔයාට මේ README එකේ තව මොනවා හරි වෙනස් කරගන්න අවශ්‍යද?
