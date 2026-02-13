@@ -7,7 +7,7 @@ A modern, fast, and responsive web application designed to convert units across 
 
 ## 🚀 Live Deployment
 
-**View the live project:** https://unit-converte.netlify.app/
+**View the live project:** [https://unit-converte.netlify.app/](https://unit-converte.netlify.app/)
 
 ---
 
@@ -15,63 +15,67 @@ A modern, fast, and responsive web application designed to convert units across 
 
 | Student Name (As per LMS) | Student ID | Primary Role |
 | --- | --- | --- |
-| **A.B Dasun Niroshana** | ITBNM-2313-0020 | **HTML Developer & Version Control** |
-| **K.R. Waruni Samanmaie Dissanayake** | ITBNM-2313-0022 | **CSS Developer & UI Designer** |
-| **S.R. Udara Welathanthri** | ITBNM-2313-0083 | **JavaScript Logic Developer** |
+| **A.B Dasun Niroshana** | ITBNM-2313-0020 | **DevOps Engineer & Version Control** |
+| **K.R. Waruni Samanmaie Dissanayake** | ITBNM-2313-0022 | **Frontend Developer & UI Designer** |
+| **S.R. Udara Welathanthri** | ITBNM-2313-0083 | **Backend Logic Developer** |
 
 ---
 
 ## ✅ Individual Contributions
 
-### **1. A.B Dasun Niroshana — HTML & GitHub Management**
+### **1. A.B Dasun Niroshana — DevOps Engineer & Version Control**
 
-* **Structure:** Developed the semantic HTML5 skeleton of the application, ensuring accessibility and proper document flow.
-* **GitHub Workflow:** Handled the repository initialization, managed commits, and organized the final project structure for version control.
-* **Metadata:** Configured head metadata for SEO and mobile responsiveness (viewport tags).
-* **Deployment:** Managed the live hosting and build status integration.
+* **Deployment Pipeline:** Managed the CI/CD workflow and successfully deployed the application on Netlify for high availability.
+* **Version Control:** Architected the GitHub repository structure, managed branching strategies, and handled all commits and pull requests.
+* **Infrastructure & SEO:** Configured the HTML5 skeleton with optimized metadata, viewport tags for mobile responsiveness, and ensured proper document flow.
+* **Project Orchestration:** Oversaw the final build process and integration of all components into a stable production environment.
 
-### **2. K.R. Waruni Samanmaie Dissanayake — CSS & UI/UX Design**
+### **2. K.R. Waruni Samanmaie Dissanayake — Frontend Developer & UI/UX Design**
 
-* **Visual Identity:** Designed the modern UI using a vibrant linear gradient color palette and professional typography.
-* **Layout:** Implemented a fully responsive flexbox-based design that adapts seamlessly to Mobile, Tablet, and Desktop screens.
-* **Component Styling:** Created interactive tab systems, custom-styled input fields, and hover animations for the "Swap" and "Clear" buttons.
-* **Glassmorphism:** Applied shadow effects and rounded containers to enhance the "Unit Converter" card aesthetic.
+* **Visual Architecture:** Developed a professional UI using modern CSS3, featuring a vibrant linear gradient palette and clean typography.
+* **Responsive Layout:** Engineered a fully fluid design using Flexbox and Grid, ensuring the app works perfectly on Mobile, Tablet, and Desktop.
+* **Component Styling:** Designed interactive UI elements including glassmorphic card containers, custom input fields, and smooth hover animations.
+* **User Experience:** Implemented the tab-based navigation system to ensure a seamless transition between different conversion categories.
 
-### **3. S.R. Udara Welathanthri — JavaScript & Logic**
+### **3. S.R. Udara Welathanthri — Backend Logic Developer**
 
-* **Conversion Engine:** Developed the core mathematical algorithms to handle complex unit scaling for Length and Weight.
-* **Temperature Logic:** Implemented specific formulas for Celsius, Fahrenheit, and Kelvin conversions.
-* **History System:** Created a dynamic array-based system to store and display the last 10 conversions with timestamps.
-* **Interactivity:** Built the Tab switching functionality and the "Swap Units" feature to allow users to toggle between units instantly.
+* **Core Conversion Engine:** Engineered the mathematical algorithms and logic for unit scaling across Length, Weight, and Temperature.
+* **Functional Programming:** Developed complex JavaScript functions to handle , , and  formulas accurately.
+* **Data Management:** Created a dynamic history system using array-based logic to store and display the last 10 conversions with real-time timestamps.
+* **Dynamic Interactivity:** Built the "Smart Swap" and "Auto-Calculate" features, ensuring instant DOM updates without page reloads.
 
 ---
 
 ## 🛠 Key Features
 
-* **Real-Time Conversion:** Updates results instantly as you type without page reloads.
+* **Real-Time Conversion:** Updates results instantly as you type.
 * **Multi-Category Support:** Handles Length (m, km, mi, etc.), Weight (kg, g, lb, etc.), and Temperature (°C, °F, K).
-* **Smart Swap:** One-click functionality to reverse "From" and "To" units.
+* **Smart Swap:** One-click functionality to reverse units instantly.
 * **History Log:** Automatically keeps track of recent conversions for quick reference.
-* **Mobile Optimized:** Touch-friendly interface designed for on-the-go usage.
+* **Optimized Performance:** Lightweight code for fast loading and touch-friendly mobile usage.
 
 ---
 
 ## 💻 Tech Stack
 
-* **HTML5:** Semantic markup.
-* **CSS3:** Custom styles, Flexbox, and Media Queries.
-* **JavaScript (ES6):** DOM manipulation, event handling, and calculation logic.
+* **HTML5:** Semantic markup and accessibility.
+* **CSS3:** Custom styling, Flexbox, and Animations.
+* **JavaScript (ES6+):** DOM manipulation and core calculation logic.
 
 ---
 
 ## ⚙️ Installation & Usage
 
 1. Clone the repository:
-   
+```bash
 git clone https://github.com/Dniroshana/Unit-Converter-Application.git
+
+```
 
 
 2. Open `index.html` in any modern web browser.
-3. No external libraries or dependencies are required (Vanilla JS/CSS).
+3. No external libraries or dependencies are required (Pure Vanilla JS/CSS).
 
 ---
+
+ඔයාට මේ README එකේ තව මොනවා හරි වෙනස් කරගන්න අවශ්‍යද?
