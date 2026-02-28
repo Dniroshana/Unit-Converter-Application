@@ -64,6 +64,20 @@ A modern, fast, and responsive web application designed to convert units across 
 
 ---
 
+## 📂 Repository Structure
+
+```text
+Unit-Converter-Application/
+├── index.html           # Main HTML file
+├── styles/              # CSS files
+├── scripts/             # JS files
+├── Dockerfile           # Docker configuration
+├── docker-compose.yml   # Docker Compose setup
+├── .dockerignore        # Docker ignore file
+├── .gitignore           # Git ignored files
+└── README.md            # Project documentation
+
+```
 ## ⚙️ Installation & Usage
 
 1. Clone the repository:
@@ -71,10 +85,61 @@ A modern, fast, and responsive web application designed to convert units across 
 git clone https://github.com/Dniroshana/Unit-Converter-Application.git
 
 ```
-
-
-2. Open `index.html` in any modern web browser.
-3. No external libraries or dependencies are required (Pure Vanilla JS/CSS).
+Here is a professional and well-structured `README.md` file for your project. You can copy and paste this content directly into your file.
 
 ---
+
+
+## 🚀 Running the Application
+
+There are two primary ways to run this application: using standard Docker commands or using Docker Compose.
+
+### Option 1: Using Docker CLI (Manual)
+
+1. **Build the Image:**
+Create the Docker image by running the following command in your terminal:
+```bash
+docker build -t unit-converter-app .
+
+```
+
+
+2. **Run the Container:**
+Start the container mapping your local port 8080 to the container's port 80:
+```bash
+docker run -d -p 8080:80 --name unit-converter-container unit-converter-app
+
+```
+
+
+The application will be accessible at: `http://localhost:8080`
+3. **Stopping the Container:**
+When you are finished, stop and remove the container:
+```bash
+docker stop unit-converter-container
+docker rm unit-converter-container
+
+```
+
+
+
+### Option 2: Using Docker Compose (Recommended)
+
+Docker Compose simplifies the build and run process into a single command:
+
+```bash
+docker-compose up --build
+
+```
+
+Access the application at: `http://localhost:8080`
+
+---
+
+## ⚙️ Configuration
+
+* **Environment Variables:** This is a static web application. It does not require any environment variables to function, as all configuration is handled directly within the browser or the served static files.
+
+---
+
 
