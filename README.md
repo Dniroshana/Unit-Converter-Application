@@ -85,11 +85,6 @@ Unit-Converter-Application/
 git clone https://github.com/Dniroshana/Unit-Converter-Application.git
 
 ```
-Here is a professional and well-structured `README.md` file for your project. You can copy and paste this content directly into your file.
-
----
-
-
 ## 🚀 Running the Application
 
 There are two primary ways to run this application: using standard Docker commands or using Docker Compose.
