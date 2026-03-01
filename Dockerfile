@@ -1,10 +1,11 @@
 FROM nginx:alpine
 
-# Default nginx files remove 
+# Remove default nginx static assets 
 RUN rm -rf /usr/share/nginx/html/*
 
-# src folder content copy to nginx folder 
+# Copy custom static assets from src directory to nginx 
 COPY src/ /usr/share/nginx/html/
 
 
 EXPOSE 80
+
